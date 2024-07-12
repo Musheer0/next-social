@@ -8,7 +8,7 @@ const Navbar = () => {
     const pathname= usePathname()
     const links =[
         {
-            path: '/home',
+            path: '/',
             name: 'homepage',
             icon: null
         },

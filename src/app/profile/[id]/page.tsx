@@ -9,10 +9,10 @@ const Homepage = () => {
     <Left/>
   </section>
   <section className="w-full lg:w-[70%] xl:w-[50%]  ">
-    <Middle/>
+    <Middle userId="434"/>
   </section>
   <section className="right sticky top-0 hidden lg:block w-[30%] h-fit ">
-    <Right/>
+    <Right userId="23r32"/>
   </section>
     </main>
   )
