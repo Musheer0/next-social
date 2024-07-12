@@ -1,5 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
+import { IoMdImages } from "react-icons/io";
+import { LuVideotape } from "react-icons/lu";
+import { FaPoll } from "react-icons/fa";
+import { MdEventNote } from "react-icons/md";
 
 const AddPost = () => {
   return (
@@ -16,19 +20,20 @@ const AddPost = () => {
         </div>
             <div className="sub-action flex flex-wrap items-center gap-2 ">
               <button className='flex items-center text-sm gap-1 bg-zinc-800 p-2 rounded-md'>
-                <Image width={20} height={20} src='/addimage.png'alt=''/>
+              <IoMdImages />
                 <span>Photo</span>
                 </button>
               <button className='flex items-center text-sm gap-1 bg-zinc-800 p-2 rounded-md'>
-                <Image width={20} height={20} src='/addvideo.png'alt=''/>
+              <LuVideotape />
+
                 <span>Video</span>
                 </button>
               <button className='flex items-center text-sm gap-1 bg-zinc-800 p-2 rounded-md'>
-                <Image width={20} height={20} src='/poll.png'alt=''/>
+              <FaPoll />
                 <span>Poll</span>
                 </button>
               <button className='flex items-center text-sm gap-1 bg-zinc-800 p-2 rounded-md'>
-                <Image width={20} height={20} src='/events.png'alt=''/>
+              <MdEventNote />
                 <span>Events</span>
                 </button>
             </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Comment from './Comment'
+import Comments from './Comments'
 
 const Post = () => {
   return (
@@ -47,7 +47,8 @@ const Post = () => {
             </p>
         </button>
       </div>
-      <Comment/>
+      <hr className='border-zinc-900'/>
+      <Comments/>
     </div>
   )
 }
