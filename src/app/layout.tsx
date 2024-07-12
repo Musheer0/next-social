@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import BottomNav from "@/components/BottomNav";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lama Dev Social Media App",
@@ -16,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+<ClerkProvider>
+<body className={`${inter.className} w-full h-screen text-zinc-50 bg-zinc-950 flex flex-col items-center `}>
+        <Navbar/>
+      <main className="w-full flex-1  overflow-auto py-2">  {children}</main>
+        <BottomNav/>
+        </body>
+</ClerkProvider>
     </html>
   );
 }
