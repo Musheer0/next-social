@@ -7,7 +7,9 @@ const Stories = dynamic(()=> import('./Stories'), {
 const AddPost= dynamic(()=> import( './AddPost'), {
   loading: ()=><p>Loading</p>
 })
-
+const PublicProfileCard = dynamic(()=> import( './PublicProfileCard'),{
+  loading:()=><p>Loading</p>
+})
 const Middle = ({userId}:{userId?:string}) => {
   return (
     <div>
@@ -16,6 +18,11 @@ const Middle = ({userId}:{userId?:string}) => {
            <>
             <Stories/>
             <AddPost/>
+           </>
+           }
+           {userId && 
+           <>
+           <PublicProfileCard/>
            </>
            }
             <Feed/>
