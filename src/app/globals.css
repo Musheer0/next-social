@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    --clerk-primary-color: #ffffff;
+    --clerk-background-color: #000000;
+    --clerk-text-color: #ffffff;
+    --clerk-input-background-color: #1a1a1a;
+    --clerk-input-border-color: #333333;
+    --clerk-button-background-color: #333333;
+    --clerk-button-text-color: #ffffff;
+    /* Add more customizations as needed */
+}

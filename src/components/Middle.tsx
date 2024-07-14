@@ -1,6 +1,8 @@
 import React from 'react'
 import Feed from './Feed'
 import dynamic from 'next/dynamic'
+import prisma from '../../db'
+import { User } from '@prisma/client'
 const Stories = dynamic(()=> import('./Stories'), {
   loading: ()=><p>Loading</p>
 })
@@ -10,7 +12,8 @@ const AddPost= dynamic(()=> import( './AddPost'), {
 const PublicProfileCard = dynamic(()=> import( './PublicProfileCard'),{
   loading:()=><p>Loading</p>
 })
-const Middle = ({userId}:{userId?:string}) => {
+const Middle = ({userId, user}:{userId?:string, user? : User | null}) => {
+
   return (
     <div>
         <div className="child h-full flex flex-col gap-2">
@@ -20,9 +23,9 @@ const Middle = ({userId}:{userId?:string}) => {
             <AddPost/>
            </>
            }
-           {userId && 
+           {(userId && user) && 
            <>
-           <PublicProfileCard/>
+           <PublicProfileCard user={user}/>
            </>
            }
             <Feed/>

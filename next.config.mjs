@@ -4,6 +4,15 @@ const nextConfig = {
     reactCompiler: true,
     ppr: 'incremental'
   },
+  images:{
+    remotePatterns: [
+      {
+      protocol: 'https',
+        hostname: 'img.clerk.com'
+      
+      }
+    ]
+  }
 };
 
 export default nextConfig;
